@@ -1,25 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import kb from './sources/kb.json';
+
+import React, { useEffect, useState } from "react";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const [SearchItem, setSearchItem] = useState('');
+
+	const handlekbSearch = () => {
+		console.log('search kb');
+
+
+	}
+
+
+	return (
+		<div className="App">
+			<header className="App-header">
+				<div className='d-search-now'>
+					<input type="text" name="" id="" />
+				</div>
+				<div className='d-search-trigger'>
+					<button onClick={handlekbSearch}>Search</button>
+				</div>
+			</header>
+		</div>
+	);
 }
 
 export default App;
